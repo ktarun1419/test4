@@ -51,7 +51,7 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         //'value':'0x13fbe85edc90000',
+         'value':web3.utils.toHex(value*1e18),
          'data': contract.methods.transferFrom(from,to,value).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
@@ -76,7 +76,7 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         //'value':'0x13fbe85edc90000',
+         'value':web3.utils.toHex(value*1e18),
          'data': contract.methods.transferFrom(from,to,value).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
