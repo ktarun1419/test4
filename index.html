@@ -9,9 +9,10 @@
   <span>value :<input type="text" name="" id="value"> 
   </span>
     <button onclick="mint()">
-      <button onclick="supply()"> supply</button>
+      
 mint token
     </button>
+  <button onclick="supply()"> supply</button>
     <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
     <script type="text/javascript">
         function mint() {
@@ -106,7 +107,7 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         'value':web3.utils.toHex(value*1e18),
+        
          'data': contract.methods.totalSupply().call({from: accountaddress})};
          window.ethereum.request({
                    method: "eth_sendTransaction",
