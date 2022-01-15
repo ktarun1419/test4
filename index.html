@@ -105,8 +105,12 @@ mint token
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
-               const tx =  contract.methods.totalSupply().call({from: accountaddress});
-        console.log(tx)
+               
+        contract.methods.totalSupply().call().then((result) => {
+            console.log(result);
+        }).catch(function(err){
+            console.log('err...\n'+err);
+        });
      
              })
   }
