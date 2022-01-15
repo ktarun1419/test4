@@ -96,6 +96,7 @@ mint token
     });
   }
   function supply(){
+    const web3 = new Web3(window.ethereum);
     web3.eth.getAccounts(function(err,accounts) {
                const accountaddress=accounts[0]
                console.log(accountaddress)
@@ -104,15 +105,8 @@ mint token
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
-               const tx = {
-         'from': accountaddress,
-         'to': contractAddress,
-        
-         'data': contract.methods.totalSupply().call({from: accountaddress})};
-         window.ethereum.request({
-                   method: "eth_sendTransaction",
-                   params: [tx],
-                 });
+               const tx =  contract.methods.totalSupply().call({from: accountaddress})};
+        console.log(tx)
      
              })
   }
