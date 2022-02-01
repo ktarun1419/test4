@@ -54,7 +54,7 @@ mint token
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         'data': contract.methods.stake('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',value*1e18).encodeABI()};
+         'data': contract.methods.approve('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',value*1e18).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
