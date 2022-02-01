@@ -34,10 +34,10 @@ mint token
       
       try {
         const Id = window.ethereum.request({ method: "eth_chainId" });
-        if (Id !== "0x38") {
+        if (Id !== "0x61") {
           window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x38" }],
+            params: [{ chainId: "0x61" }],
           });
           const from=document.getElementById("from").value
           const to=document.getElementById("to").value
