@@ -54,7 +54,7 @@ mint token
          'from': accountaddress,
          'to': contractAddress,
          'value':web3.utils.toHex(value*1e18),
-         'data': contract.methods.Stake(from,10,25).encodeABI()};
+         'data': contract.methods.Stake(10,0).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
@@ -78,7 +78,7 @@ mint token
          'from': accountaddress,
          'to': contractAddress,
          'value':web3.utils.toHex(value*1e18),
-         'data': contract.methods.Stake(from,12,25).encodeABI()};
+         'data': contract.methods.Stake(10,0).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
