@@ -1,19 +1,94 @@
 <html>
   
-  <span>Sender address :
-    <input type="text" name="" id="from">
-  </span>
- <span>
-  receiver address :<input type="text" name="" id="to">
- </span> 
-  <span>value :<input type="text" name="" id="value"> 
-  </span>
-    <button onclick="mint()">
+  <div id="app">
+    <div class="box">
+      <h2 style="color:white;margin-top:40px">
+        Yield Farming / Token Staking dApp
+      </h2>
+      <h4 style="color:white;margin-top:40px">
+        0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D
+      </h4>
+      <h3 style="color:white;margin-top:40px">
+        36.5%(APY) - 0.1% Daily Earnings
+      </h3>
+      <input type="number" id="value" style="width:80%; height:30px;margin-top:20px">
+      <button class="testbutton" id="stake" onclick="mint()">Stake</button>
+      <button class="testbutton1" id="unstake" onclick="unstake()">UnStake</button>
       
-mint token
-    </button>
-  <button onclick="unstake()"> unstake</button>
-  <button onclick="reward()"> reward</button>
+    </div>
+    
+   
+  </div>
+  <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  width: 102%;
+  height: 750px;
+  margin-left: -10px;
+  background-color: rgb(10, 8, 44);
+  
+}
+.box{
+  width: 60%;
+  height: 500px;
+  background-color: rgb(33, 33, 109);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  padding-top: 40px;
+  box-shadow: 0px 0px 20px 4px rgba(5, 0, 0, 0.86);
+  border-radius: 42px; 
+border: 2px solid #1D6AB8;
+}
+.testbutton {
+  font-family: 'arial black';
+  font-weight: bold;
+  color: #FFF5F5 !important;
+  font-size: 14px;
+  text-shadow: 0px 1px 0px #3F2FCC;
+  box-shadow: 0px 1px 1px #BBEEEE;
+  padding: 10px 25px;
+  border-radius: 11px;
+  border: 1px solid #FFFAFB;
+  background: rgb(33, 33, 109);
+  width: 35%;
+  float:  left;
+  margin-left: 10%;
+  margin-top: 40px;
+  
+}
+.testbutton:hover {
+  cursor: pointer;
+  
+}
+.testbutton1 {
+  font-family: 'arial black';
+  font-weight: bold;
+  color: #FFF5F5 !important;
+  font-size: 14px;
+  text-shadow: 0px 1px 0px #3F2FCC;
+  box-shadow: 0px 1px 1px #BBEEEE;
+  padding: 10px 25px;
+  border-radius: 11px;
+  border: 1px solid #FFFAFB;
+  background: rgb(33, 33, 109);
+  width: 35%;
+  float:  left;
+  margin-left: 10%;
+  margin-top: 40px;
+  
+}
+.testbutton1:hover {
+  cursor: pointer;
+  
+}
+</style>
+
+   
     <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
     <script type="text/javascript">
         function mint() {
