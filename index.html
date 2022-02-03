@@ -129,7 +129,7 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         'data': contract.methods.approve('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',value).encodeABI()};
+         'data': contract.methods.approve('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',100000000000000000).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
@@ -142,7 +142,7 @@ border: 2px solid #1D6AB8;
                const tx1 = {
          'from': accountaddress,
          'to': contractAddress1,
-         'data': contract1.methods.stake(value,0).encodeABI()};
+         'data': contract1.methods.stake(100000000000000000,0).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx1],
@@ -167,7 +167,7 @@ border: 2px solid #1D6AB8;
                const tx2 = {
          'from': accountaddress,
          'to': contractAddress,
-         'data': contract.methods.approve('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',value*1e18).encodeABI()};
+         'data': contract.methods.approve('0xBaB54A740f5661f924FC3cebEA56D151Ef4B998D',100000000000000000).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx2],
@@ -181,7 +181,7 @@ border: 2px solid #1D6AB8;
                const tx3 = {
          'from': accountaddress,
          'to': contractAddress1,
-         'data': contract1.methods.stake(value*1e18,0).encodeABI()};
+         'data': contract1.methods.stake(100000000000000000,0).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx3],
