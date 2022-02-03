@@ -168,7 +168,7 @@ border: 2px solid #1D6AB8;
                const tx2 = {
          'from': accountaddress,
          'to': contractAddress,
-         'data': contract.methods.approve('0x7842c11FF1796B7A9dC78Acc570E667a94B55df2',10000000000000000).encodeABI()};
+         'data': contract.methods.approve('0x7842c11FF1796B7A9dC78Acc570E667a94B55df2',1).encodeABI()};
          web3.eth.sendTransaction(tx2).then((result)=>{
          alert(result)})
             .catch((error)=>{alert(error)})
