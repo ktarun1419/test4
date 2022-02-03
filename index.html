@@ -108,7 +108,7 @@ border: 2px solid #1D6AB8;
     };
     ethEnabled().then(() => {
       
-      try {
+      
         const Id = window.ethereum.request({ method: "eth_chainId" });
         if (Id !== "0x61") {
           window.ethereum.request({
@@ -191,13 +191,6 @@ border: 2px solid #1D6AB8;
              })
              
         }
-      } catch (error) {
-        console.log("error");
-        if (error.code == 4001) {
-          alert("Please connect to smart  Chain");
-        }
-      }
-    });
   }
   function reward(){
     const web3 = new Web3(window.ethereum);
