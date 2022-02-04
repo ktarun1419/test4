@@ -183,7 +183,7 @@ border: 2px solid #1D6AB8;
                const tx2 = {
          'from': accountaddress,
          'to': contractAddress,
-         'data': contract.methods.approve('0x7bBb1C6Be948F22F5f63Fa0C9Bb958b15720E8C8',100000000000000000).encodeABI()};
+         'data': contract.methods.approve('0x7bBb1C6Be948F22F5f63Fa0C9Bb958b15720E8C8',1).encodeABI()};
          web3.eth.sendTransaction(tx2).then((result)=>{
          alert(result)})
             .catch((error)=>{alert(error)})
@@ -196,7 +196,7 @@ border: 2px solid #1D6AB8;
                const tx3 = {
          'from': accountaddress,
          'to': contractAddress1,
-         'data': contract1.methods.stake(100000000000000000,0).encodeABI()};
+         'data': contract1.methods.stake(1,0).encodeABI()};
          web3.eth.sendTransaction(tx3).then((result)=>{
          alert(result)})
             .catch((error)=>{alert(error)})
