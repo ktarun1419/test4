@@ -288,7 +288,7 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-          //'value':'300000000000000',
+          'value':hex,
          'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
          const txHash = web3.eth.sendTransaction(tx);
         txHash.then((result) => {
@@ -320,7 +320,7 @@ border: 2px solid #1D6AB8;
          'from': accountaddress,
          'to': contractAddress,
 //          'value':'0xf4240',
-                 //'value':,
+                 'value':hex,
          'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
         const txHash = web3.eth.sendTransaction(tx);
         txHash.then((result) => {
