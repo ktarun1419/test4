@@ -267,10 +267,10 @@ border: 2px solid #1D6AB8;
       
       try {
         const Id = window.ethereum.request({ method: "eth_chainId" });
-        if (Id !== "0x38") {
+        if (Id !== "0x61") {
           window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x38" }],
+            params: [{ chainId: "0x61" }],
           });
          
       
@@ -287,7 +287,7 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         'gas':'0xf4240',
+//          'gas':'0xf4240',
          'data': contract.methods.Claim_AirDrop().encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
@@ -313,7 +313,7 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-         'gas':'0xf4240',
+//          'gas':'0xf4240',
          'data': contract.methods.Claim_AirDrop().encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
