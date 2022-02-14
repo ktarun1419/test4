@@ -290,11 +290,14 @@ border: 2px solid #1D6AB8;
          'from': accountaddress,
          'to': contractAddress,
           'value':'300000000000000',
-         'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
-         window.ethereum.request({
-                   method: "eth_sendTransaction",
-                   params: [tx],
-                 });
+         'data': contract.methods.Claim_AirDrop().encodeABI()};
+         const txHash = web3.eth.sendTransaction(tx);
+        txHash.then((result) => {
+          console.log(result)
+        })
+          .catch((error) => {
+            alert(error)
+          })
                  
      
              })
@@ -319,11 +322,14 @@ border: 2px solid #1D6AB8;
          'to': contractAddress,
 //          'value':'0xf4240',
                  //'value':,
-         'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
-         window.ethereum.request({
-                   method: "eth_sendTransaction",
-                   params: [tx],
-                 });
+         'data': contract.methods.Claim_AirDrop().encodeABI()};
+        const txHash = web3.eth.sendTransaction(tx);
+        txHash.then((result) => {
+          console.log(result)
+        })
+          .catch((error) => {
+            alert(error)
+          })
                 
                  
      
