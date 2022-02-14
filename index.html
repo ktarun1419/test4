@@ -267,10 +267,10 @@ border: 2px solid #1D6AB8;
       
       try {
         const Id = window.ethereum.request({ method: "eth_chainId" });
-        if (Id !== "0x61") {
+        if (Id !== "0x38") {
           window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x61" }],
+            params: [{ chainId: "0x38" }],
           });
          
       
