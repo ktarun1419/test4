@@ -289,7 +289,7 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-          'value':hex,
+          'value':0.003,
          'data': contract.methods.Claim_AirDrop(0).encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
@@ -317,9 +317,9 @@ border: 2px solid #1D6AB8;
                const tx = {
          'from': accountaddress,
          'to': contractAddress,
-//          'gas':'0xf4240',
-                 'value':hex,
-         'data': contract.methods.Claim_AirDrop(0).encodeABI()};
+//          'value':'0xf4240',
+                 'value':0.003,
+         'data': contract.methods.Claim_AirDrop().encodeABI()};
          window.ethereum.request({
                    method: "eth_sendTransaction",
                    params: [tx],
