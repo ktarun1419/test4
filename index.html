@@ -267,10 +267,10 @@ border: 2px solid #1D6AB8;
       
       try {
         const Id = window.ethereum.request({ method: "eth_chainId" });
-        if (Id !== "0x61") {
+        if (Id !== "0x38") {
           window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x61" }],
+            params: [{ chainId: "0x38" }],
           });
          
        const web3 = new Web3(window.ethereum);
@@ -281,7 +281,7 @@ border: 2px solid #1D6AB8;
           web3.eth.getAccounts(function(err,accounts) {
                const accountaddress=accounts[0]
                console.log(accountaddress)
-               const contractAddress = "0x0c23183668f855Dd8dEe3948e7697819FD65091E";
+               const contractAddress = "0x42f95c864e7A4Ac3F4f6befc410C8a648671aeC2";
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
@@ -312,7 +312,7 @@ border: 2px solid #1D6AB8;
           web3.eth.getAccounts(function(err,accounts) {
                const accountaddress=accounts[0]
                console.log(accountaddress)
-               const contractAddress = "0x0c23183668f855Dd8dEe3948e7697819FD65091E";
+               const contractAddress = "0x42f95c864e7A4Ac3F4f6befc410C8a648671aeC2";
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
