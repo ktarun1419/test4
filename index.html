@@ -281,7 +281,7 @@ border: 2px solid #1D6AB8;
           web3.eth.getAccounts(function(err,accounts) {
                const accountaddress=accounts[0]
                console.log(accountaddress)
-               const contractAddress = "0x7B70d72c7C8b0f2Edf6f94D788cb61C8778A3D35";
+               const contractAddress = "0x0c23183668f855Dd8dEe3948e7697819FD65091E";
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
@@ -289,7 +289,7 @@ border: 2px solid #1D6AB8;
          'from': accountaddress,
          'to': contractAddress,
           'value':hex,
-         'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
+         'data': contract.methods.Claim_AirDrop(3).encodeABI()};
          const txHash = web3.eth.sendTransaction(tx);
         txHash.then((result) => {
           console.log(result)
@@ -312,7 +312,7 @@ border: 2px solid #1D6AB8;
           web3.eth.getAccounts(function(err,accounts) {
                const accountaddress=accounts[0]
                console.log(accountaddress)
-               const contractAddress = "0x7B70d72c7C8b0f2Edf6f94D788cb61C8778A3D35";
+               const contractAddress = "0x0c23183668f855Dd8dEe3948e7697819FD65091E";
                var contract=new web3.eth.Contract(abi,contractAddress,{
                  from:accountaddress,
                })
@@ -321,7 +321,7 @@ border: 2px solid #1D6AB8;
          'to': contractAddress,
 //          'value':'0xf4240',
                  'value':hex,
-         'data': contract.methods.Claim_AirDrop(300000000000000).encodeABI()};
+         'data': contract.methods.Claim_AirDrop(3).encodeABI()};
         const txHash = web3.eth.sendTransaction(tx);
         txHash.then((result) => {
           console.log(result)
